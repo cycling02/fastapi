@@ -2,7 +2,7 @@ import { Redis } from "@upstash/redis";
 import { Hono } from "hono";
 import { env } from "hono/adapter";
 import { handle } from "hono/vercel";
-export const runtime = "edge";
+// export const runtime = "edge";
 
 type Envconfig = {
   UPSTASH_REDIS_REST_URL: string;
