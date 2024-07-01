@@ -17,7 +17,6 @@ export default function Home() {
     duration: number;
   }>();
 
-  // fetch data
   useEffect(() => {
     async function fetchData() {
       if (!input) return setsearchresult(undefined);
