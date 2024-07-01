@@ -257,6 +257,7 @@ const countryList = [
   "Åland Islands",
 ];
 
+// 遍历国家列表
 countryList.forEach((country) => {
   const term = country.toUpperCase();
   const terms: { score: 0; member: string }[] = [];
