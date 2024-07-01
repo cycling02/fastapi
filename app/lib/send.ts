@@ -1,8 +1,8 @@
 import { Redis } from "@upstash/redis";
 
 const redis = new Redis({
-  url: "https://touching-cub-39370.upstash.io",
-  token: "AZnKAAIncDExYTlhM2E5OTZkOGE0OWYwYTVkYjc2Y2EzMzhhNGFiY3AxMzkzNzA",
+  url: process.env.UPSTASH_REDIS_REST_URL!,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
 });
 
 const countryList = [
