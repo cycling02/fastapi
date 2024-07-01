@@ -36,7 +36,7 @@ export default function Home() {
         duration: number;
       };
       setsearchresult(data);
-    }, 400); // 设置延迟时间为 300ms
+    }, 400); 
 
     setTimer(newTimer);
 
