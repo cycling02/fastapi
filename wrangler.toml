@@ -1,0 +1,6 @@
+name='fastapi'
+compatiblility_date='2024-07-01'
+
+[vars]
+UPSTASH_REDIS_REST_URL=https://touching-cub-39370.upstash.io
+UPSTASH_REDIS_REST_TOKEN=AZnKAAIncDExYTlhM2E5OTZkOGE0OWYwYTVkYjc2Y2EzMzhhNGFiY3AxMzkzNzA
