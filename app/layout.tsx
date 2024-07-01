@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SpeedSearch",
-  description: "A high performance API",
+  description: "A high-performance search API",
+
 };
 
 export default function RootLayout({
