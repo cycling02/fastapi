@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   Command,
@@ -12,25 +11,38 @@ import { CommandItem } from "cmdk";
 
 export default function Home() {
   const [input, setinput] = useState<string>("");
+
   const [searchresult, setsearchresult] = useState<{
     results: string[];
     duration: number;
   }>();
+  const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    async function fetchData() {
-      if (!input) return setsearchresult(undefined);
-      const response = await fetch(`/api/search?q=${input}`);
+    // 清除之前的定时器
+    if (timer) {
+      clearTimeout(timer);
+    }
 
+    // 如果输入为空，清空搜索结果
+    if (!input) {
+      setsearchresult(undefined);
+      return;
+    }
+    const newTimer = setTimeout(async () => {
+      const response = await fetch(`/api/search?q=${input}`);
       const data = (await response.json()) as {
         results: string[];
         duration: number;
       };
       setsearchresult(data);
-    }
-    fetchData();
-  }, [input]);
+    }, 400); // 设置延迟时间为 300ms
 
+    setTimer(newTimer);
+
+    // 清理函数：组件卸载时清除定时器
+    return () => clearTimeout(newTimer);
+  }, [input]);
 
   return (
     <main className='h-screen w-screen bg-slate-200'>
