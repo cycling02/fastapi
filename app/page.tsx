@@ -17,6 +17,7 @@ export default function Home() {
     duration: number;
   }>();
 
+  // fetch data
   useEffect(() => {
     async function fetchData() {
       if (!input) return setsearchresult(undefined);
@@ -30,6 +31,7 @@ export default function Home() {
     }
     fetchData();
   }, [input]);
+
 
   return (
     <main className='h-screen w-screen bg-slate-200'>

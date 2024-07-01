@@ -1,5 +1,7 @@
 import { Redis } from "@upstash/redis";
 
+
+// 新建redis实例
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL!,
   token: process.env.UPSTASH_REDIS_REST_TOKEN!,
