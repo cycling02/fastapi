@@ -52,13 +52,13 @@ export default function Home() {
           <img src='/storm.png' width={50} height={50} alt='img'></img>
         </div>
 
-        <p className='text-zinc-600 text-lg max-w-prose text-center'>
+        <p className='text-zinc-600 text-lg max-w-prose text-center p-2'>
           A high performance API built with Hono, Upstash, Next.js and Tailwind
           CSS.
           <br />
           Type a query and get results in milliseconds.
         </p>
-        <div className='max-w-md w-full'>
+        <div className='max-w-md w-[90%]'>
           <Command>
             <CommandInput
               placeholder='Search Countries...'
